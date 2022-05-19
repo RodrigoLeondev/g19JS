@@ -2,19 +2,27 @@
 //  Pedir al usuario que ingrese 3 números
 // Imprime en consola el mayor
 // Opcional- usar alert
+ 
 
-let numero1 = window.prompt('Dame un número', 'number')
-if(numero1 === null ) {
-    console.log('No hay numero')
-}
+/*
+let firstnumber = parseInt(prompt('Dame un numero', 'number'))
+let secondnumber = parseInt(prompt('Dame otro numero', 'number'))
+let thirdnumber = parseInt(prompt('Dame un numero más', 'number'))
 
-let numero2 = window.prompt('Dame un segundo número', 'number')
-if(numero2 === null ) {
-    console.log('No hay numero')
-}
+    if(firstnumber > secondnumber && firstnumber > thirdnumber){
+        alert(`El numero ${firstnumber} es el mayor`)
+    } else if(secondnumber > firstnumber && secondnumber > thirdnumber){
+        alert(`El numero ${secondnumber} es el mayor`)
+    } else if(thirdnumber > firstnumber && thirdnumber > secondnumber){
+        alert(`El numero ${thirdnumber} es el mayor`)
+    } else {
+        alert('Los tres numero son iguales')
+    } */
 
-let numero3 = window.prompt('Dame un tercer número', 'number')
-if(numero3 === null ) {
-    console.log('No hay numero')
-}
-console.log()
+    let firstnumber = parseInt(prompt('Escribe un numero', 'number'))
+    let secondnumber = parseInt(prompt('Escribe otro numero', 'number'))
+
+    firstnumber > secondnumber ?
+        console.log(`${firstnumber} es mayor que ${secondnumber}`)
+        :
+        console.log(`${secondnumber} es mayor que ${firstnumber}`)
