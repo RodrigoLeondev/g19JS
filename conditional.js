@@ -54,6 +54,7 @@ numero % 2 === 0
 
 //Switch
 
+/*
 let age = parseInt( prompt('Cual es tu edad', 17) )
 let isAge = age >= 18 ? true : false
 switch (isAge){
@@ -66,4 +67,7 @@ switch (isAge){
     default:
         console.log('no es edad valida')
         break;
-}
+}*/
+
+let text = "gatitos";
+let code = text.charCodeAt(1);

@@ -18,7 +18,7 @@ let thirdnumber = parseInt(prompt('Dame un numero más', 'number'))
     } else {
         alert('Los tres numero son iguales')
     } */
-
+/*
     let firstnumber = parseInt(prompt('Escribe un numero', 'number'))
     let secondnumber = parseInt(prompt('Escribe otro numero', 'number'))
 
@@ -26,3 +26,8 @@ let thirdnumber = parseInt(prompt('Dame un numero más', 'number'))
         console.log(`${firstnumber} es mayor que ${secondnumber}`)
         :
         console.log(`${secondnumber} es mayor que ${firstnumber}`)
+        */
+
+
+        let text = "gatitos";
+        let code = text.charCodeAt(1);
