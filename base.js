@@ -1,1 +1,1 @@
-function number()
+//function number()
