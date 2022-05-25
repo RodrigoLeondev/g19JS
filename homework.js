@@ -12,13 +12,14 @@
 }
 
 */
+/*
 function temperatura (){
     
 let gradosCelsius = prompt('Vamos a convertir °C a °F', '¿A cuántos grados Celsius estás?')
 var convCF = (gradosCelsius * 9/5 +32) 
 alert('Estas a ${convCF}')
 
-}
+}*/
        
 
 
