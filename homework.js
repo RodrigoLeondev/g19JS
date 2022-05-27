@@ -1,25 +1,28 @@
-//Funcion que pida una palabra, invierta la palabra, retorne en alert
-
-
 /*
-    let text = prompt('Dame una palabra')
-    //let reversed = 
-    text.reverse();
+Dado un arreglo con nombres de personas, 
+Funcion que devuele un arreglo con los nombres de las personas que empiezan con vocales y además capitalizados
 
-    alert(text.reverse)
+onlyNamesVowels( ['jorge','ana','ivan','sergio','oscar' ] )
+-> ['Ana','Ivan','Oscar']
+ 
+ => Se puede resolver con .forEach() o .filter()
+       */
 
-    function word(){
-}
+ /*
 
-*/
-/*
-function temperatura (){
-    
-let gradosCelsius = prompt('Vamos a convertir °C a °F', '¿A cuántos grados Celsius estás?')
-var convCF = (gradosCelsius * 9/5 +32) 
-alert('Estas a ${convCF}')
-
-}*/
-       
+let onlyNamesVowels = ( ['jorge','ana','ivan','sergio','oscar' ] )
 
 
+const capitalize = (arr) => {
+    let capNames = []
+    arr.forEach( (name) => {
+        let namesCapitalized = `${name[0].toUpperCase()} ${name.slice(1).toLowerCase() }`
+        capNames.push(namesCapitalized)
+    })
+   return capNames
+} */
+//console.log(capiNames)
+
+
+let onlyNamesVowels = ( ['jorge','ana','ivan','sergio','oscar' ] )
+let names = onlyNamesVowels.filter(())
