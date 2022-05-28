@@ -22,7 +22,10 @@ const capitalize = (arr) => {
    return capNames
 } */
 //console.log(capiNames)
-
+/*
 
 let onlyNamesVowels = ( ['jorge','ana','ivan','sergio','oscar' ] )
 let names = onlyNamesVowels.filter(())
+*/
+
+//const additionMultiArr = (arregloDeArreglos)

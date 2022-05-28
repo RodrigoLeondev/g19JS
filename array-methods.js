@@ -46,7 +46,7 @@ console.log(result) */
 
 
 // Array Index
-
+/*
 let arrTwoDimensions = [ [1,2], [3,4],[9,8] ]
 
 let newArray = []
@@ -57,4 +57,4 @@ let newArray = []
     })
     newArray.push(newArrayInterior)
 })
-console.log(newArray)
+console.log(newArray)*/
