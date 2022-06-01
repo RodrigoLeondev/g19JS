@@ -29,6 +29,7 @@ for ( key in salarios ){
  * -> 95000
  */
 
+/*
  let salarios = {
     'jorge': '20000',
     'lenny': '30000',
@@ -44,7 +45,7 @@ for (item in salarios){
 }
 console.log(suma)
 
-
+*/
 
 
 /**
@@ -53,7 +54,7 @@ console.log(suma)
  * Debe recibir 1 parametro 
  * Objeto de salarios
  */
-
+/*
 
  const arr = (obj) => {
      let total = 0
@@ -64,7 +65,7 @@ console.log(suma)
  }
     console.log(arr(salarios))
 
-
+*/
 
 /**
  * Ejercicio 3:
@@ -91,3 +92,28 @@ console.log(suma)
  * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
  * 
  */
+
+
+let objectCar = { // <-- Create
+    model: 'jetta',
+    doors: 4,
+    year: 2022,
+    cilindraje: 2,
+    color: 'rojo'
+}
+
+// CRUD
+// C --> create
+
+// R --> read
+console.log(objectCar.model)
+
+// U --> update
+objectCar.color = 'verde'
+
+// D --> delete
+delete objectCar.cilindraje
+
+// Crear / actualizar un objeto 
+// Leer propiedades de un elemento
+// 
