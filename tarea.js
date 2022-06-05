@@ -13,26 +13,17 @@ let salarios = {
     'Albert': 50000,
     'jorge': 50000
 }
- /*
-const employes = ( obj ) => {
-    let total = 0
-    for(val in obj) {
-        total += (salarios[val])
-        //total += (salarios[key])
+
+const employesTotal = ( obj ) => {
+    let suma = 0
+    let contador = 0
+    
+    for(elemento in obj) {
+        suma += obj[elemento] 
+        contador ++
     }
-    return total
+    return console.log(`Los empleados son ${contador} y el total de salarios ${suma}`)
 
 }
-console.log(employes(salarios))
-*/
 
-const employes = ( obj ) => {
-    let total = 0
-    for(key in obj) {
-       // total += (salarios[val])
-        total += (salarios[key])
-    }
-    return total
-
-}
-console.log(employes(salarios))
+employesTotal(salarios)
