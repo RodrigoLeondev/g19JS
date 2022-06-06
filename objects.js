@@ -1,4 +1,6 @@
 
+
+
 /*
 let salarios = {
     'jorge': '20000',
@@ -179,7 +181,7 @@ console.log(objSeal)
 //Object.values()
 //Object.entries()
 */
-
+/*
 let objEmpleado = {
     name: 'jorge',
     age: 30,
@@ -204,3 +206,4 @@ let totalFinal = 0
 
     console.log('totalEmpleado', totalEmpleado)
     console.log('total', totalFinal)
+*/
