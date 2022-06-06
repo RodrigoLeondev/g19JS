@@ -7,26 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 
-    
-    class="title" 
-    id="title"> 
-    Lorem, ipsum dolor.</h1>
+    <h1>
+        dom events
+    </h1>
 
-    <div class="content">
-        <h2 class="subtitle1">subtitulo</h2>
-        <h3 class="subtitle2">subtitulo</h3>
-    </div>
+    <!-- Evetnos de mouse -->
+    <button onclick="enviar()"> click! </button>
+    <button onclick="calcular()"> click 2! </button>
+    <!-- <button onclick="clickboton3()"> click 3! </button> -->
 
-    <ul>
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-        <li class="item">Lorem</li>
-    </ul>
-  
-    <script src="homework.js"></script>
+    <!-- Eventos de teclado -->
+    <input 
+        type="text" 
+        onkeydown="empezando()"
+        onkeypress="presionando()"
+        onkeyup="terminando()"
+        ">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <script src="domEvent.js"></script>
     
 </body>
 </html>
