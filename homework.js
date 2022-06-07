@@ -332,17 +332,19 @@
     }
   ]
   
-  let listUsers = ''
-  users.forEach((cv) => { 
-      listUsers += users
-  })
-/*   
+  
+
+  /* const filterUsers = users.filter((str) => {
+    let recibeStr = ''
+    if(typeof str === 'string'){
+      console.log(filterUsers)
+    }
+  }) */
+  
+
   const filterUsers = ( strToFilter ) => {
-      
-      users.forEach( (cv) => {
-        filterUsers += 
-      })
-  } */
-  
+    listUsers = ''
+    users.filter(name = 'str' === 'string')
+    console.log(filterUsers)
+  }
   listUsers('brad')
-  
