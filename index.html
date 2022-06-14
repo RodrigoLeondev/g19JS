@@ -7,23 +7,29 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>
+
+  <h1>
         dom events
     </h1>
 
-    <!-- Evetnos de mouse -->
-    <button onclick="enviar()"> click! </button>
-    <button onclick="calcular()"> click 2! </button>
-    <!-- <button onclick="clickboton3()"> click 3! </button> -->
+<!--  1
+<button onclick="clickBoton()"> click me!</button>
+<button onclick="enviar()"> Enviando algo!</button> -->
 
-    <!-- Eventos de teclado -->
-    <input 
-        type="text" 
-        onkeydown="empezando()"
-        onkeypress="presionando()"
-        onkeyup="terminando()"
-        ">
-    <textarea name="" id="" cols="30" rows="10"></textarea>
+<!-- 2  
+    <input type="text" onkeyup="escribiendo()"> -->
+
+      <!-- 3 -->
+    <input type="text" 
+    onkeydown="empezando()"
+    onkeypress="presionando()"
+    onkeyup="terminando()"
+    onfocus="focoEnInput()"
+    >
+
+
+
+
 
     <script src="domEvent.js"></script>
     
