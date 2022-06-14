@@ -1,0 +1,30 @@
+/* Selector universal */
+
+*{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+h1 {
+    text-align: center;
+    max-width:  600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    /* Aquí se especifica que la tabla mida lo necesario que mide el elemento contenido
+    si el nombre es asdgafdag --> medira eso */
+    max-width: 600px;
+    /* Aquí se especifica que mida los 600 px */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead{
+    background-color: aquamarine;
+}
+th, td {
+    border: 1px solid#444;
+}
