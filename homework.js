@@ -83,20 +83,25 @@
 
 let tbody = document.querySelector('tbody') //--> primero selecciono mi etiqueta body
 koders.forEach( (koder, index, arr) => {  // -->función para regresar koder
-    console.log(koder)
+    // console.log(koder)
 
-    // let tr = document.createElement('tr')
-    // let tdName = document.createElement('td')
-    // tdName.textContent = koder.name
-    // tr.appendChild(tdName)
-    // let tdAge = document.createElement('td')
-    // tdAge.textContent = koder.age
-    // tr.appendChild(tdAge)
-    // let tdGen = document.createElement('td')
-    // tdGen.textContent = koder.generation
-    // tr.appendChild(tdGen)
+    let tr = document.createElement('tr')
+
+    let tdName = document.createElement('td')
+    tdName.textContent = koder.name
+    tr.appendChild(tdName)
+
+    let tdAge = document.createElement('td')
+    tdAge.textContent = koder.age
+    tr.appendChild(tdAge)
+
+    let tdGen = document.createElement('td')
+    tdGen.textContent = koder.generation
+    tr.appendChild(tdGen)
+
     // console.log(tr)
-    // tbody.appendChild(tr)
+    tbody.appendChild(tr)
+    
     
 })
 
