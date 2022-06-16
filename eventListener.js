@@ -1,7 +1,6 @@
 // event listener
 //event delegation
 
-2
 const albumes = [
     {
       "albumId": 1,
@@ -93,19 +92,23 @@ const loadAlbumes = () => {
   document.querySelector('.cards__albumes').innerHTML = template
 } 
 
-const loadFinished = () => {
-  loadAlbumes()
-}
+// const loadFinished = () => {
+//   loadAlbumes()
+// }
 
-// DOMContentLoaded es equivalente a unload
+// let body = document.querySelector('body')
+// body.addEventListener('load', loadAlbumes) // Al declarar Listener para llamar al body, se quita el on y se deja solo load // loadAlbumes es el callback
+
+
+ // DOMContentLoaded es equivalente a unload
 
 // el evento es load y va a esperar al callback que es loadAlbumes para ejecutar la funcion
-document.addEventListener('DOMContentLoaded', loadAlbumes)
+// document.addEventListener('DOMContentLoaded', loadAlbumes)
 
  // Cuando se da click en el boton
 let botonCargar = document.querySelector('#btnAlbumes')
 botonCargar.addEventListener('click', loadAlbumes)
-
+ 
 /* Pintar todos los post cuando cargue el documento
     Se usará filtro
  */
