@@ -1,4 +1,4 @@
-/* /**
+ /* /**
  * Ejercicio 1
  * Funcion que reciba como parametro un arreglo de posts
  * Pinte todos los posts cuando carge  el documento
@@ -624,7 +624,9 @@
       })
   } */
 
-  const loadPost = () => { 
+/*  
+Función mía
+const loadPost = () => { 
       let contador = 1
       let template = posts.reduce((acc, cv, index, arr) => {
 
@@ -641,4 +643,29 @@
           </div> ` }, '') 
           document.querySelector('#lista__posts').innerHTML = template 
         } 
-          document.addEventListener('DOMContentLoaded', loadPost)  
+          document.addEventListener('DOMContentLoaded', loadPost) */  
+
+
+          
+        //  Funcion Jorge
+
+const paintPost = (arrPosts) => {
+
+  let allPosts = arrPosts.reduce( (acc, post) => {
+    return acc += `
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">${post.title}</h5>
+        </div>
+        <p class="mb-1">${post.body}</p>
+        <small class="text-muted">${post.id}</small>
+      </a>
+    `
+  }, '')
+  
+  document.querySelector('.list-group').innerHTML = allPosts
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  paintPost(posts)
+}, false) 

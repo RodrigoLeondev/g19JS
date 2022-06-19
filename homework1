@@ -1,65 +1,14 @@
+/**
+ * Ejercicio 2
+ * Generar una funcion que reciba como parametro un string
+ * y filtre solo los objetos que 
+ * tengan en el name, username o email dicho string
+ * .filter()
+ * .forEach()
+ */
 
-  
-
-
-/*  Codigo Rodrigo
-
-  const userPrint = () => { 
-    let template = users.reduce((acc, cv, index, arr) => {
-  
-        return acc += ` 
-          <div class="list-group"> 
-          <a href="#" class="list-group-item list-group-item-action " aria-current="true"> 
-              <div class="d-flex w-100 justify-content-between"> 
-              <h5 class="mb-1">${cv.title}</h5>  
-              <small ${index + 1} ${ index >= 1 ? 'day' : 'days'}> Days ago </small>
-              </div> 
-              <p class="mb-1">${cv.body}</p> 
-              <small>${posts.id}</small> 
-          </a> 
-        </div> ` }, '') 
-        document.querySelector('#filter__user').innerHTML = template 
-      } 
-        document.addEventListener('DOMContentLoaded', userPrint)
-
-const filterUsers = ( strToFilter )  => {
-
-  strToFilter = strToFilter.toLowerCase()
-  let filterUsers = users.filter (( user ) => {
-    if(
-      user.name.toLowerCase().includes( strToFilter) ||
-      user.username.toLowerCase().includes( strToFilter) ||
-      user.email.toLowerCase().includes( strToFilter)
-    ){
-      return user
-    }
-
-  })
-  return filterUsers
-}
-
-filterUsers('brad')
-
-let inputSearch = document.getElementById('filter__user')
-
-inputSearch.addEventListener('keyup', () => {
-  // obtener el valor a buscar
-  let SearchTerm =  inputSearch.value
-  // Filtrarlos usuarios
-  let userFiltrados = filterUsers(SearchTerm)
-  // Imprimir en consola
-  console.log(userFiltrados)
-  // Agregarlos al leyout en #lista__users
-}) */
-
-
-
-
-
-
-
-
-// Codigo de Victor
+// traer los usuario por AJAX
+// XHR
 let users = [
   {
     "id": 1,
@@ -385,51 +334,49 @@ let users = [
   }
 ]
 
-​
-const loadUsers = ( arr ) => {
-  let template = arr.reduce((acc, cv) => {
-    return acc += `
-      <a href="#" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">${cv.name} </h5>
-              <small>${cv.id}</small>
-          </div>
-          <p class="mb-1">${cv.username}</p>
-          
-          <small>${cv.email}</small>
-      </a>
-      
-    `
-  }, '')
-  
-  document.querySelector('.list-group').innerHTML = template
-} 
-​
-​
 
 const filterUsers = ( strToFilter ) => {
-​
-  console.log(strToFilter)
-  return users.filter( ( user ) => {
-      return user.name.toLowerCase().match(strToFilter.toLowerCase())
+  strToFilter = strToFilter.toLowerCase()
+  let filteredUsers = users.filter( (user) => {
+    if(
+      user.name.toLowerCase().includes(strToFilter) ||
+      user.username.toLowerCase().includes(strToFilter) ||
+      user.email.toLowerCase().includes(strToFilter)
+    ){
+      return user
+    }
   })
+  return filteredUsers
 }
-​
-// let botonSearch = document.getElementById('btnSearch')
-let strSearch = document.getElementById('txtSearch')
-​
-/*
-  botonSearch.addEventListener('click', (  ) => {
-            console.log( strSearch.value )
-            let filtrados = filterUsers(strSearch.value)
-            loadUsers( filtrados )
-       })
-*/
-  strSearch.addEventListener('keyup', (  ) => {
-          
-          let filtrados = filterUsers(strSearch.value)
-          loadUsers( filtrados )
-     })
-​
-document.addEventListener('DOMContentLoaded', loadUsers(users ) )
-// filterUsers('brad')
+
+const printUserList = (usersFiltered) => {
+  let allUserLayout = usersFiltered.reduce((acc, user, idx, arr) => {
+    return acc += `
+    <a href="#" class="list-group-item list-group-item-action " aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">${user.name}</h5>
+      </div>
+      <p class="mb-1">${user.phone}</p>
+      <small>${user.email}</small>
+    </a>
+    `
+  }, '')
+
+  document.getElementById('users__filtered').innerHTML = allUserLayout
+}
+
+
+// cuando cargue la pagina, cargar todos los usuarios
+document.addEventListener('DOMContentLoaded',  printUserList(users) )
+
+let inputSearch = document.getElementById('filter__user')
+inputSearch.addEventListener('keyup', () => {
+  // obtener el valor a buscar
+  let searchTerm = inputSearch.value
+  // Filtrar los usuarios
+  let usersFiltrados = filterUsers(searchTerm)
+  // imprimirlos en consola
+  console.log(usersFiltrados)
+  // agregarlos al layout en #lista__users
+  printUserList(usersFiltrados)
+}) 
