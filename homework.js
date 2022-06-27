@@ -1,4 +1,4 @@
-const postCreated = (resp) => {
+ const postCreated = (resp) => {
     
     if(resp.name != ''){
         document.querySelector('#wrap__alert').classList.remove(d-none)
